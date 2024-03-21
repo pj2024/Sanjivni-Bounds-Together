@@ -1,0 +1,1273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --white:#f1f5f9;
+    --black:#1e293b;
+    --dark-black:#09090b;
+    --rose:#ef4444;
+    --dark-white:#f8fafc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn{
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--dark-black);
+    color: var(--rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    /* background-color: var(--white); */
+    color: var(--white);
+}
+
+.sec1{
+    width: 100%;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar{
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb{
+    /* height: 100px; */
+    border-radius: 30px;
+    background-color: var(--rose);
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--rose);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.995);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5rem;
+    /* z-index: 50; */
+    /* position: relative; */
+}
+
+
+.header .logo{
+    width: 20%;
+    /* background-color: #09090b; */
+    height: 100%;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.header .logo .image-con{
+    width: 40%;
+    height: 100%;
+}
+
+.header .logo .image-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header .logo p span{
+    font-size: 30px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+}
+
+.header .menu-opions{
+    width: 70%;
+    height: 100%;
+    /* background-color: #09090b; */
+    position: relative;
+}
+
+.header .menu-opions ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.header .menu-opions ul li a{
+    color: var(--white);   
+    font-size: 18px;
+    font-weight: 300;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+.header .menu-opions ul li a:hover:after{
+    transform: scaleX(1);
+}
+.header .menu-opions ul li a:after{
+    content: "";
+    position: absolute;
+    background-color: var(--white);
+    bottom: -5px;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+.header .menu-opions ul li a:hover{
+    color: var(--dark-black);
+}
+
+.header .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 30%;
+    height: 100%;
+    /* display: none; */
+}
+
+.header .btns a{
+    color: var(--dark-white);
+    transition: all ease-in 2s;
+}
+
+.header .btns a:hover{
+   color: var(--rose);
+}
+
+/* sec1 bg img */
+
+.sec1 .bg-img-sec{
+    width: 100%;
+    height: calc(100% - 50px);
+    background-image: url(image/sec1bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-image: fill 0 linear-gradient(rgba(8, 8, 8, 0.388), #00000072);
+    position: relative;
+}
+
+.sec1 .text-con{
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    color: var(--dark-white);
+}
+
+.sec1 .text-con .slogun{
+    width: 800px;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.sec1 .text-con .register-sen{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sec1 .text-con .btn-con{
+   width: 50vw;
+   /* background-color: red; */
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+.sec1 .text-con  .btn-con .sec-1-btn{
+    width: 45%;
+    font-size: 1.3vw;
+}
+
+.sec1 .text-con  .btn-con #login-bachatBtn  a{
+    color: var(--rose);
+    transition: all .3s ease-in-out;
+}
+
+.sec1 .text-con  .btn-con #login-bachatBtn  a:hover{
+    color: var(--dark-white);
+}
+
+.sec1 .text-con .btn-con #register-btn a{
+    color: var(--rose);
+    transition: all .3s ease-in-out;
+}
+
+.sec1 .text-con #register-btn a:hover{
+    color: var(--dark-white);
+}
+
+/* sign up and login form con */
+.signupForm{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background-color: var(--dark-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    padding: 10px 25px;
+    border-radius: 4px;
+    transition: all .4s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+}
+
+
+.signupForm h1{
+    color: var(--rose);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+} 
+
+
+.signupForm h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    bottom: -10px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.signupForm h1:hover:after{
+    transform: scaleX(1);
+}
+
+.signupForm form{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10px;
+}
+
+.signupForm form label{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.signupForm form input{
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.388);
+    font-size: 18px;
+}
+
+.signupForm form #signupBtn{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.signupForm form #crossBtn{
+    position: absolute;
+    top: -60px;
+    right: -15px;
+    cursor: pointer;
+}
+
+.loginForm{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background-color: var(--dark-white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    padding: 25px 30px;
+    border-radius: 4px;
+    transition: all .4s linear;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+}
+
+.loginForm h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    bottom: -10px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.loginForm h1:hover::after{
+    transform: scaleX(1);
+}
+
+
+.loginForm h1{
+    color: var(--rose);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+} 
+
+.loginForm form{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10px;
+}
+
+.loginForm form label{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.loginForm form input{
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(8, 8, 8, 0.388);
+    font-size: 18px;
+}
+
+.loginForm form #loginBtn{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.loginForm form #crossBtn{
+    position: absolute;
+    top: -60px;
+    right: -15px;
+    cursor: pointer;
+}
+
+
+
+/* logoutBtn style */
+
+.header .user{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28%;
+} 
+
+.header .user p{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--dark-white);
+    width: 100%;
+}
+
+.header .user p a{
+    color: var(--rose);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.header .user p a:hover{
+    color: var(--dark-white);
+}
+
+/* logout Btn of bachtgat  start*/
+.sec1 .user_bachat_gat_con{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 5rem;
+}
+
+.sec1 .user_bachat_gat_con #addproduct{
+    width: 30%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-black);
+    color: var(--dark-white);
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sec1 .user_bachat_gat_con #addproduct a{
+    color: var(--rose);
+    font-weight: 400;
+}
+.sec1 .user_bachat_gat{
+    height: 65px;
+    width: 45%;   
+    /* margin-top: 25px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-black);
+    color: var(--dark-white);
+    font-size: 18px;
+    padding: 1rem;
+}
+.sec1 .user_bachat_gat p{
+    color: var(--dark-white);
+    font-weight: 550;
+}
+.sec1 .user_bachat_gat p a{
+    color: var(--rose);
+    font-weight: 400;
+}
+/* logout Btn of bachtgat  end*/
+
+/* registration form css */
+
+
+.register-from{
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-white);
+    padding: 10px 25px;
+    transition: all .4s linear;
+}
+
+.register-from h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    bottom: -10px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.register-from h1:hover::after{
+    transform: scaleX(1);
+}
+
+.register-from h1{
+    color: var(--rose);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+} 
+
+
+.register-from form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+}
+   
+.register-from form .input-con{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+}
+
+.register-from form .input-con div{
+    width: 100%;
+    padding: 2px 5px;
+    text-align: left;
+}
+
+.register-from form .input-con div label{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.register-from form .input-con div input,textarea{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+}
+
+.register-from form #regBtn{
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+
+.sec2{
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-black);
+}
+
+.sec2 .inner-sec2{
+    width: 80%;
+    height: 100%;
+    /* text-align: center; */
+    padding: 3rem 0;
+}
+
+.sec2 .inner-sec2 h1{
+    color: var(--rose);
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+.sec2 .inner-sec2 h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--dark-white);
+    bottom: -6px;
+    left: 0%;
+    width: 200px;
+    height: 3px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.sec2 .inner-sec2 h1:hover:after{
+    transform: scaleX(1);
+}
+
+.inner-sec2 .text-con-sec2 .image-sec2{
+    width: 35%;
+    height: 60%;
+    overflow: hidden;
+    background-color: var(--rose);
+    border-radius: 50%;
+    padding: 3rem;
+}
+
+.inner-sec2 .text-con-sec2 .image-sec2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inner-sec2 .text-con-sec2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.inner-sec2 .text-con-sec2 .text-con{
+    width: 50%;
+}
+
+.inner-sec2 .text-con-sec2 .text-con p{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    color: var(--dark-white);
+}
+
+.inner-sec2 .text-con-sec2 .text-con h1{
+    font-size: 28px;
+    text-align: left;
+    margin: 0;
+}
+
+.inner-sec2 .text-con-sec2 .text-con h1 span{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.inner-sec2 .text-con-sec2 .text-con h1::after{
+    display: none;
+}
+/* login bachat gat form start  */
+
+.login-bachatGatForm{
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--rose); */
+    position: relative;
+}
+
+.login-bachatGatForm form{
+    width: 32%;
+    height: 65vh;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+    padding: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.login-bachatGatForm form h1{
+    color: var(--rose);
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.login-bachatGatForm form h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    bottom: -10px;
+    left: 0;
+    width: 40%;
+    height: 2px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.login-bachatGatForm form h1:hover::after{
+    transform: scaleX(1);
+}
+
+.login-bachatGatForm form .input-con{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-bachatGatForm form .input-con div input{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+    font-size: 18px;
+}
+
+.login-bachatGatForm form #loginBachtGatBtn{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* login bachat gat form end  */
+
+/* logout bachatgat start */
+.Bguser{
+    position: absolute;
+    top: -7%;
+    right: -40%;
+}
+
+/* logout bachatgat end */
+
+/* sec3 style contact us section */
+
+.sec3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec3 .inner-sec3{
+    width: 80%;
+    height: 100vh;
+    padding: 3rem 0;
+}
+
+.sec3 .inner-sec3 h1{
+    color: var(--rose);
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    cursor: pointer;
+    margin-left: 4rem;
+}
+.sec3 .inner-sec3 h1::after{
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    bottom: -6px;
+    left: 0%;
+    width: 200px;
+    height: 3px;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+
+.sec3 .inner-sec3 h1:hover:after{
+    transform: scaleX(1);
+}
+
+
+.sec3 .inner-sec3 .text-con-sec3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.text-con-sec3 .image-con{
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-con-sec3 .image-con img{
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    left: 48%;
+    top: 48%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+.text-con-sec3 .form-con{
+    width: 50%;
+    padding: 1rem 2rem;
+}
+
+.text-con-sec3 .form-con form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.text-con-sec3 .form-con form input{
+    width: 100%;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 19px;
+    font-size: 400;
+}
+
+.text-con-sec3 .form-con form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.text-con-sec3 .form-con form #submitBtn{
+    width: 30%;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.text-con-sec3 .form-con h2{
+    margin-bottom: 20px;
+    font-size: 26px;
+    /* text-transform: uppercase; */
+    transition:  all .3s ease-in;
+    cursor: pointer;
+}
+
+.text-con-sec3 .form-con h2:hover{
+    color: var(--rose);
+}
+
+
+/* add product section start */
+
+.addproductCon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    height: 69vh;
+    border-radius: 5px;
+    background-color: var(--dark-white);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.443);
+    padding: 1rem 2rem;
+    transition: all .4s linear;
+    margin-top: 20px;
+}
+
+
+
+.addproductCon h1{
+    color: var(--rose);
+    font-size: 3.8vh;
+}
+.addproductCon form{
+    width: 100%;
+    margin-top: 20px;
+    /* height: 80%; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    position: relative;
+}
+.addproductCon form label{
+    color: var(--dark-black);
+    font-weight: 600;
+    font-size: 2.6vh;
+}
+.addproductCon form input{
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.443);
+    border-radius: 5px;
+    font-size: 2.6vh;
+    color: var(--dark-black);
+}
+.addproductCon form #crossBtn{
+    position: absolute;
+    top: -12%;
+    left: 98%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.addproductCon form #addProBtn{
+    font-weight: 700;
+    font-size: 2.5vh;
+    margin-top: 10px;
+}
+
+/* add product section end */
+
+/* footer style */
+.footer{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-black);
+    color: var(--dark-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .fot-inner-con{
+    width: 80%;
+    height: 100%;
+    padding: 4rem;
+}
+
+.fot-inner-con .fot-text-con{
+    width: 100%;
+    height: 90%;
+    /* background-color: var(--dark-white); */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    border-bottom: 1px solid var(--dark-white);
+}
+
+.fot-inner-con .fot-text-con .text-con{
+    width: 120%;
+    height: 100%;
+    margin-right: 20px;
+    /* padding: 1rem; */
+    /* background-color: #344e41; */
+}
+
+.fot-text-con .text-con h1{
+    font-size: 21px;
+    font-weight: 900;
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.fot-text-con .text-con h1::after{
+    content: "";
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rose);
+    border-radius: 20px;
+}
+
+.fot-text-con .text-con p{
+    font: 16px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: .5px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* .fot-text-con .text-con p:nth-child(4){
+    border-bottom: none;
+} */
+
+.fot-text-con .text-con a{
+    text-decoration: none;
+    color: var(--rose);
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.fot-text-con .text-con form{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 30px;
+    flex-direction: column;
+    text-align: left;
+}
+
+.fot-text-con .text-con form input{
+    /* padding: 1rem; */
+    background-color: var(--dark-black);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--white);
+    color: var(--dark-white);
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.fot-text-con .text-con form span{
+    border-style: dotted;
+    border-color: var(--dark-white);
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 2px 4px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fot-text-con .text-con form  #subscribeBtn{
+    background-color: var(--dark-white);
+    font-size: 18px;
+    font-weight: 700;
+}
+.fot-text-con .text-con form  #subscribeBtn:hover{
+    color: var(--black);
+}
+.fot-inner-con  .down-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.fot-inner-con  .down-con .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: var(--rose);
+}
+
+.fot-inner-con  .down-con .logo .image-con{
+    width: 60%;
+    height: 100%;
+}
+
+.fot-inner-con  .down-con .logo .image-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fot-inner-con  .down-con .logo p span{
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.fot-inner-con .down-con .copyright-text{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fot-inner-con .down-con .copyright-text p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.fot-inner-con .down-con .copyright-text p span{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--rose);
+}
+.fot-inner-con .down-con .socil-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+
+}
+
+.fot-inner-con .down-con .socil-icons .icons:nth-child(5){
+    border-right: none;
+}
+
+.fot-inner-con .down-con .socil-icons .icons{
+    border-right: 1px solid var(--dark-white);
+    color: var(--dark-white);
+    cursor: pointer;
+    transition:  all .3s ease-in-out;
+    padding-right: 20px;
+}
+
+.fot-inner-con .down-con .socil-icons .icons:hover{
+    color: var(--rose);
+}
+/* footer end */
+
+/* list start */
+
+.list-sec{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-sec .list-sec-inner{
+    width: 90%;
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
+.list-sec-inner .list-upper{
+    width: 100%;
+    height: 55vh;
+    border-radius: 5px;
+    /* background-color: #09090b; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    /* color: var(--dark-white); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+}
+
+
+.list-upper .image-sec{
+    width: 35%;
+    height: 35vh;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.list-upper .image-sec img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.list-upper .text-sec{
+    width: 60%;
+    height: 40vh;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+.list-upper .text-sec h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.list-upper .text-sec p{
+    font-size: 20px;
+}
+
+.list-upper .text-sec .con-sec{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 1rem;
+    margin-top: 10px;
+}
+
+.list-upper .text-sec .con-sec svg{
+    color: var(--rose);
+}
+
+.list-upper .text-sec .con-sec span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.list-upper .product{
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    top: 95%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+}
+
+.list-lower{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 1rem;
+    margin-top: 10px;
+    /* height: auto; */
+    padding: 1rem;
+}
+
+.list-lower .list-pro{
+    width: 100%;
+    height: 55vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    position: relative;
+}
+
+.list-lower .list-pro .image-con{
+    width: 90%;
+    height: 100%;    
+}
+
+.list-lower .list-pro .image-con img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.list-lower .list-pro .text-con{
+    position: absolute;
+    width: 16vw;
+    height: 35vh;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%); 
+    background-color: var(--black);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
+    padding: 2rem;
+    color: var(--dark-white);
+    text-transform: uppercase;
+}
+
+.list-lower .list-pro .text-con h1 span{
+    color: var(--rose);
+    font-weight: 700;
+}
+
+.list-lower .list-pro .text-con p span{
+    color: var(--rose);
+    font-weight: 600;
+}
+
+.list-lower .list-pro .sale{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    left: 10%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+    background-color: var(--dark-white);
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+/* list end */
